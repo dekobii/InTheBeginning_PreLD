@@ -29,11 +29,20 @@ public class TileScript : MonoBehaviour {
 
 	public void Grow()
 	{
-		transform.localScale *= 1.1f;
+        Vector3 r = transform.localScale;
+
+        transform.localScale = new Vector3(r.x,r.y * 1.1f,r.z);
 	}
 
-	// Called to indicate this tile is being hovered
-	public void TileIsHovered()
+    public void Shrink()
+    {
+        Vector3 r = transform.localScale;
+
+        transform.localScale = new Vector3(r.x, r.y * 1/1.1f, r.z);
+    }
+
+    // Called to indicate this tile is being hovered
+    public void TileIsHovered()
 	{
 		hovered = true;
 	}

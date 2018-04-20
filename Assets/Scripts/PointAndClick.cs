@@ -44,6 +44,13 @@ public class PointAndClick : MonoBehaviour {
                 fxSource.Play();
 
             }
+            if (Input.GetMouseButtonDown(1))
+            {
+                hitTile.Shrink();
+                fxSource.clip = sfx[1];
+                fxSource.Play();
+
+            }
             prev = hitGO;
         }
 		
