@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TileScript : MonoBehaviour {
-
-	public Material normalMaterial;
-	public Material highlightedMaterial;
-
 	private bool hovered;
 
 	void Start()
 	{
-		GetComponent<Renderer>().material = normalMaterial;
 		hovered = false;
 	}
 
@@ -20,11 +15,11 @@ public class TileScript : MonoBehaviour {
 		// Check if tile is being hovered this frame
 		if (hovered)
 		{
-			GetComponent<Renderer>().material = highlightedMaterial;
+			GetComponent<Renderer>().material.SetFloat("_Outline", 0.08f);
 		}
 		else
 		{
-			GetComponent<Renderer>().material = normalMaterial;
+			GetComponent<Renderer>().material.SetFloat("_Outline", 0f);
 		}
 		hovered = false;
 	}
