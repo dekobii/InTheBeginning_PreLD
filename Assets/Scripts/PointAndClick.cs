@@ -6,18 +6,23 @@ public class PointAndClick : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			RaycastHit hit;
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		RaycastHit hit;
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-			if (Physics.Raycast(ray, out hit, 100f))
+		// Check hovered tile
+		if (Physics.Raycast(ray, out hit, 100f))
+		{
+			GameObject hitGO = hit.transform.gameObject;
+			TileScript hitTile = hitGO.GetComponent<TileScript>();
+			hitTile.TileIsHovered();
+
+			// Grow the tile on click
+			if (Input.GetMouseButtonDown(0))
 			{
-				// Execute something on hit gameobject
-				GameObject hitGO = hit.transform.gameObject;
-				TileScript hitTile = hitGO.GetComponent<TileScript>();
 				hitTile.Grow();
 			}
 		}
+		
+		
 	}
 }
