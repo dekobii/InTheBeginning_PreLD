@@ -13,9 +13,11 @@ public class PointAndClick : MonoBehaviour {
 
 			if (Physics.Raycast(ray, out hit, 100f))
 			{
-				// Execute something on hit gameobject
+                // Execute something on hit gameobject
+                
 				GameObject hitGO = hit.transform.gameObject;
-				TileScript hitTile = hitGO.GetComponent<TileScript>();
+                Debug.Log(hitGO);
+                TileScript hitTile = hitGO.GetComponent<TileScript>();
 				hitTile.Grow();
 			}
 		}

@@ -6,6 +6,7 @@ public class TileScript : MonoBehaviour {
 
 	public void Grow()
 	{
+        Debug.Log("Clicked");
 		transform.localScale *= 1.1f;
 	}
 }
