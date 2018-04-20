@@ -178,52 +178,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 70, y: -30, z: 0}
---- !u!1001 &385524221
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4814076561438710, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814076561438710, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814076561438710, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814076561438710, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814076561438710, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814076561438710, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814076561438710, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814076561438710, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814076561438710, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &714398344
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32bacf0db32180840aa7b017c9c43f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 2
-  height: 2
+  width: 5
+  height: 5
   gridHex: {fileID: 1990161694138802, guid: 4a395051800e4bc469bd1699ac8dd4c5, type: 2}
