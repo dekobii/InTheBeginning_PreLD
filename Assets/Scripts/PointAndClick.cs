@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class PointAndClick : MonoBehaviour {
 
-	void Update()
+    public AudioClip[] sfx;
+    AudioSource fxSource;
+    public GameObject SoundManager;
+    GameObject prev;
+
+    private void Start()
+    {
+        fxSource = SoundManager.GetComponent<AudioSource>();
+    }
+
+    void Update()
 	{
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -12,16 +22,30 @@ public class PointAndClick : MonoBehaviour {
 		// Check hovered tile
 		if (Physics.Raycast(ray, out hit, 100f))
 		{
+            
 			GameObject hitGO = hit.transform.gameObject;
 			TileScript hitTile = hitGO.GetComponent<TileScript>();
-			hitTile.TileIsHovered();
-
+            if (prev == hitGO)
+            {
+                hitTile.TileIsHovered();
+                
+            }
+            else {
+                fxSource.clip = sfx[0];
+                fxSource.Play();
+            }
+            
+            
 			// Grow the tile on click
 			if (Input.GetMouseButtonDown(0))
 			{
 				hitTile.Grow();
-			}
-		}
+                fxSource.clip = sfx[1];
+                fxSource.Play();
+
+            }
+            prev = hitGO;
+        }
 		
 		
 	}
